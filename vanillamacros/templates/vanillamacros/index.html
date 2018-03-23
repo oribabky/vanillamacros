@@ -1,0 +1,57 @@
+{% load static %}
+
+<head>
+    {% block title %}<title>Vanilla Macros</title>{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vanillamacros/style.css' %}" />
+</head>
+<body>
+<div id="outer-wrapper">
+    <div id="banner">
+        <h1>VanillaMacros.org</h1>
+    </div>
+
+
+    <div id="macros">
+
+    <br>
+    <select>
+      <option value="all">All</option>
+      <option value="regular">"Regular" macros</option>
+      <option value="opel">"SuperMacro" macros</option>
+    </select>
+
+        <div id="filters-wrapper">
+            <div id="classes">
+                <a href="/main/druid/"><img id="class-image" src="{% static 'vanillamacros/images/class_druid.jpg' %}" border="2"
+                {% ifequal className 'druid' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/hunter/"><img id="class-image" src="{% static 'vanillamacros/images/class_hunter.jpg' %}" border="2"
+                {% ifequal className 'hunter' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/mage/"><img id="class-image" src="{% static 'vanillamacros/images/class_mage.jpg' %}" border="2" 
+                {% ifequal className 'mage' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/paladin/"><img id="class-image" src="{% static 'vanillamacros/images/class_paladin.jpg' %}" border="2"
+                {% ifequal className 'paladin' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/priest/"><img id="class-image" src="{% static 'vanillamacros/images/class_priest.jpg' %}" border="2"
+                {% ifequal className 'priest' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/rogue/"><img id="class-image" src="{% static 'vanillamacros/images/class_rogue.jpg' %}" border="2"
+                {% ifequal className 'rogue' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/shaman/"><img id="class-image" src="{% static 'vanillamacros/images/class_shaman.jpg' %}" border="2"
+                {% ifequal className 'shaman' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/warlock/"><img id="class-image" src="{% static 'vanillamacros/images/class_warlock.jpg' %}" border="2"
+                {% ifequal className 'warlock' %} style="border-color:gold" {% endifequal %}></a>
+                <a href="/main/warrior/"><img id="class-image" src="{% static 'vanillamacros/images/class_warrior.jpg' %}" border="2"
+                {% ifequal className 'warrior' %} style="border-color:gold" {% endifequal %}></a>
+            </div>     
+        {% verbatim %} 
+        print()
+        {% endverbatim %}
+        </div> 
+
+    </div>
+
+</div>
+
+
+{% block content %}
+
+{% endblock %}
+</body>
